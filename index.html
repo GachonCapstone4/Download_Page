@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EmailAssist 서비스 소개와 데스크톱 응용프로그램 다운로드 페이지"
+    />
+    <title>EmailAssist 다운로드</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="global-nav" aria-label="EmailAssist">
+      <a class="brand" href="#intro">EmailAssist</a>
+      <div class="nav-links">
+        <a href="#service">서비스 소개</a>
+        <a href="#workflow">업무 흐름</a>
+        <a href="#download">다운로드</a>
+      </div>
+    </nav>
+
+    <main>
+      <section id="intro" class="slide slide-hero">
+        <div class="copy">
+          <span class="eyebrow">AI email workspace</span>
+          <h1>메일 업무가 정리되는 가장 조용한 방식.</h1>
+          <p>
+            EmailAssist는 문의, 일정, 후속 답장까지 매일 반복되는 이메일 업무를
+            하나의 데스크톱 응용프로그램에서 다루도록 돕습니다.
+          </p>
+          <div class="actions">
+            <a id="primary-download" class="button button-primary" href="#download">
+              최신 앱 다운로드
+            </a>
+            <a class="button button-secondary" href="#service">서비스 보기</a>
+          </div>
+        </div>
+
+        <div class="app-preview" aria-label="EmailAssist 앱 화면 미리보기">
+          <div class="window-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="window-body">
+            <aside>
+              <strong>Inbox</strong>
+              <span></span>
+              <span></span>
+              <span></span>
+            </aside>
+            <section class="mail-list">
+              <article>
+                <b>신규 문의</b>
+                <span>계약 일정 조율 요청</span>
+              </article>
+              <article>
+                <b>답장 필요</b>
+                <span>견적서 확인 메일</span>
+              </article>
+              <article>
+                <b>일정 감지</b>
+                <span>금요일 오후 2시 미팅</span>
+              </article>
+            </section>
+            <section class="draft">
+              <b>AI Draft</b>
+              <span></span>
+              <span></span>
+              <span></span>
+              <button type="button">검토 후 보내기</button>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="service" class="slide slide-dark">
+        <div class="section-title">
+          <span class="eyebrow">Service</span>
+          <h2>메일, 초안, 일정이 하나의 리듬으로 이어집니다.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-icon">01</span>
+            <h3>받은 메일 정리</h3>
+            <p>문의 상태와 우선순위를 업무 화면에서 바로 확인합니다.</p>
+          </article>
+          <article>
+            <span class="feature-icon">02</span>
+            <h3>AI 답장 초안</h3>
+            <p>템플릿과 고객 맥락을 반영한 초안을 검토 가능한 상태로 남깁니다.</p>
+          </article>
+          <article>
+            <span class="feature-icon">03</span>
+            <h3>일정 후보 감지</h3>
+            <p>메일 속 약속 정보를 찾아 캘린더 작업으로 이어지게 합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow" class="slide slide-light">
+        <div class="section-title">
+          <span class="eyebrow">Workflow</span>
+          <h2>반복 작업은 자동화하고, 판단은 사람에게 남깁니다.</h2>
+        </div>
+        <div class="workflow-list">
+          <div><span>01</span><strong>메일 수신과 상태 분류</strong></div>
+          <div><span>02</span><strong>AI 답장 초안 생성</strong></div>
+          <div><span>03</span><strong>일정 후보 감지</strong></div>
+          <div><span>04</span><strong>템플릿 기반 후속 처리</strong></div>
+        </div>
+      </section>
+
+      <section id="download" class="slide slide-download">
+        <div class="section-title">
+          <span class="eyebrow">Desktop app</span>
+          <h2>Web_Front를 데스크톱 응용프로그램으로 내려받습니다.</h2>
+          <p>
+            GitHub Release에 새 버전이 올라오면 이 페이지가 최신 설치 파일을
+            자동으로 표시합니다.
+          </p>
+        </div>
+
+        <div class="release-panel">
+          <div>
+            <span class="label">최신 버전</span>
+            <strong id="release-version">확인 중</strong>
+            <time id="release-date"></time>
+          </div>
+          <a id="release-link" class="button button-primary" href="#" target="_blank" rel="noreferrer">
+            릴리스 노트
+          </a>
+        </div>
+
+        <div id="download-assets" class="asset-list" aria-live="polite">
+          <div class="empty-state">
+            <strong>설치 파일을 불러오는 중입니다.</strong>
+            <span>잠시 후 Windows, macOS, Linux 빌드가 표시됩니다.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
