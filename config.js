@@ -1,3 +1,3 @@
 window.EMAILASSIST_DOWNLOAD_CONFIG = {
-  releaseRepository: "GachonCapstone4/Web_Front",
+  releaseRepository: "GachonCapstone4/App_Front",
 };

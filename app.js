@@ -1,5 +1,5 @@
 const config = window.EMAILASSIST_DOWNLOAD_CONFIG ?? {};
-const releaseRepository = config.releaseRepository ?? "GachonCapstone4/Web_Front";
+const releaseRepository = config.releaseRepository ?? "GachonCapstone4/App_Front";
 const releaseEndpoint = `https://api.github.com/repos/${releaseRepository}/releases/latest`;
 
 const versionNode = document.querySelector("#release-version");
@@ -7,6 +7,8 @@ const dateNode = document.querySelector("#release-date");
 const releaseLinkNode = document.querySelector("#release-link");
 const primaryDownloadNode = document.querySelector("#primary-download");
 const assetsNode = document.querySelector("#download-assets");
+const scenarioStageNode = document.querySelector(".scenario-stage");
+const storyStepNodes = Array.from(document.querySelectorAll(".story-step"));
 
 const installerExtensions = [".dmg", ".exe", ".msi", ".appimage", ".deb"];
 
@@ -165,4 +167,38 @@ async function loadLatestRelease() {
   }
 }
 
+function initScenarioScroller() {
+  if (!scenarioStageNode || storyStepNodes.length === 0) {
+    return;
+  }
+
+  const activateStep = (activeStep) => {
+    const scene = activeStep.dataset.scene;
+
+    scenarioStageNode.dataset.scene = scene;
+    storyStepNodes.forEach((step) => {
+      step.classList.toggle("is-active", step === activeStep);
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleEntries = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visibleEntries[0]) {
+        activateStep(visibleEntries[0].target);
+      }
+    },
+    {
+      rootMargin: "-32% 0px -42% 0px",
+      threshold: [0.2, 0.45, 0.7],
+    },
+  );
+
+  storyStepNodes.forEach((step) => observer.observe(step));
+}
+
+initScenarioScroller();
 void loadLatestRelease();

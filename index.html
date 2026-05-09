@@ -14,129 +14,242 @@
     <nav class="global-nav" aria-label="EmailAssist">
       <a class="brand" href="#intro">EmailAssist</a>
       <div class="nav-links">
-        <a href="#service">서비스 소개</a>
-        <a href="#workflow">업무 흐름</a>
+        <a href="#service">서비스</a>
+        <a href="#scenario">사용 흐름</a>
         <a href="#download">다운로드</a>
       </div>
     </nav>
 
     <main>
-      <section id="intro" class="slide slide-hero">
-        <div class="copy">
+      <section id="intro" class="hero-section">
+        <div class="hero-copy">
           <span class="eyebrow">AI email workspace</span>
-          <h1>메일 업무가 정리되는 가장 조용한 방식.</h1>
+          <h1>메일 업무가 한 화면에서 정리됩니다.</h1>
           <p>
-            EmailAssist는 문의, 일정, 후속 답장까지 매일 반복되는 이메일 업무를
-            하나의 데스크톱 응용프로그램에서 다루도록 돕습니다.
+            EmailAssist는 받은 메일, AI 답장 초안, 일정 후보, 템플릿 자동화를
+            하나의 데스크톱 업무 흐름으로 연결합니다.
           </p>
           <div class="actions">
             <a id="primary-download" class="button button-primary" href="#download">
               최신 앱 다운로드
             </a>
-            <a class="button button-secondary" href="#service">서비스 보기</a>
+            <a class="button button-secondary" href="#scenario">흐름 보기</a>
           </div>
         </div>
 
-        <div class="app-preview" aria-label="EmailAssist 앱 화면 미리보기">
-          <div class="window-bar">
+        <figure class="hero-device" aria-label="EmailAssist 데스크톱 앱 화면 예시">
+          <div class="device-toolbar">
             <span></span>
             <span></span>
             <span></span>
+            <strong>EmailAssist</strong>
           </div>
-          <div class="window-body">
-            <aside>
-              <strong>Inbox</strong>
-              <span></span>
-              <span></span>
-              <span></span>
+          <div class="app-shell-mock">
+            <aside class="mock-sidebar">
+              <b>Workspace</b>
+              <span class="active">Inbox</span>
+              <span>Calendar</span>
+              <span>Templates</span>
+              <span>Automation</span>
             </aside>
-            <section class="mail-list">
-              <article>
-                <b>신규 문의</b>
-                <span>계약 일정 조율 요청</span>
+            <section class="mock-inbox">
+              <div class="mock-header">
+                <strong>오늘 처리할 메일</strong>
+                <em>12</em>
+              </div>
+              <article class="mail-card active">
+                <b>가격표와 미팅 가능 시간 문의</b>
+                <small>신규 문의 · 자동 분류 완료</small>
               </article>
-              <article>
-                <b>답장 필요</b>
-                <span>견적서 확인 메일</span>
+              <article class="mail-card">
+                <b>계약서 수정본 확인 요청</b>
+                <small>답장 필요 · 우선순위 높음</small>
               </article>
-              <article>
-                <b>일정 감지</b>
-                <span>금요일 오후 2시 미팅</span>
+              <article class="mail-card">
+                <b>금요일 데모 일정 조율</b>
+                <small>일정 감지 · 캘린더 후보</small>
               </article>
             </section>
-            <section class="draft">
-              <b>AI Draft</b>
-              <span></span>
-              <span></span>
-              <span></span>
-              <button type="button">검토 후 보내기</button>
+            <section class="mock-draft-panel">
+              <div class="ai-badge">AI Draft</div>
+              <h2>안녕하세요, 요청하신 가격표와 데모 일정을 함께 안내드립니다.</h2>
+              <p>
+                금요일 오후 2시 데모 가능하며, 첨부 자료 기준으로 맞춤 견적을
+                정리했습니다.
+              </p>
+              <div class="draft-actions">
+                <span>검토 필요</span>
+                <button type="button">보내기</button>
+              </div>
             </section>
           </div>
-        </div>
+          <figcaption>실제 서비스 흐름을 바탕으로 구성한 데스크톱 앱 UI 예시</figcaption>
+        </figure>
       </section>
 
-      <section id="service" class="slide slide-dark">
-        <div class="section-title">
+      <section id="service" class="service-rail" aria-labelledby="service-title">
+        <div class="section-heading">
           <span class="eyebrow">Service</span>
-          <h2>메일, 초안, 일정이 하나의 리듬으로 이어집니다.</h2>
+          <h2 id="service-title">메일을 읽고, 판단하고, 다음 행동까지 이어갑니다.</h2>
         </div>
-        <div class="feature-grid">
+        <div class="rail-track">
           <article>
-            <span class="feature-icon">01</span>
-            <h3>받은 메일 정리</h3>
-            <p>문의 상태와 우선순위를 업무 화면에서 바로 확인합니다.</p>
+            <span>01</span>
+            <h3>수신함 정리</h3>
+            <p>문의 상태, 우선순위, 담당 액션을 한 번에 확인합니다.</p>
           </article>
           <article>
-            <span class="feature-icon">02</span>
-            <h3>AI 답장 초안</h3>
-            <p>템플릿과 고객 맥락을 반영한 초안을 검토 가능한 상태로 남깁니다.</p>
+            <span>02</span>
+            <h3>AI 초안 검토</h3>
+            <p>고객 맥락과 템플릿을 반영한 답장을 검토 후 발송합니다.</p>
           </article>
           <article>
-            <span class="feature-icon">03</span>
-            <h3>일정 후보 감지</h3>
-            <p>메일 속 약속 정보를 찾아 캘린더 작업으로 이어지게 합니다.</p>
+            <span>03</span>
+            <h3>일정 감지</h3>
+            <p>메일 속 날짜와 시간을 찾아 캘린더 후보로 정리합니다.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>자동화 설정</h3>
+            <p>카테고리 규칙과 템플릿을 이용해 반복 처리를 줄입니다.</p>
           </article>
         </div>
       </section>
 
-      <section id="workflow" class="slide slide-light">
-        <div class="section-title">
-          <span class="eyebrow">Workflow</span>
-          <h2>반복 작업은 자동화하고, 판단은 사람에게 남깁니다.</h2>
+      <section id="scenario" class="scenario-section" aria-labelledby="scenario-title">
+        <div class="scenario-heading">
+          <span class="eyebrow">Scenario</span>
+          <h2 id="scenario-title">사용자는 메일을 열고, 앱은 다음 장면을 준비합니다.</h2>
         </div>
-        <div class="workflow-list">
-          <div><span>01</span><strong>메일 수신과 상태 분류</strong></div>
-          <div><span>02</span><strong>AI 답장 초안 생성</strong></div>
-          <div><span>03</span><strong>일정 후보 감지</strong></div>
-          <div><span>04</span><strong>템플릿 기반 후속 처리</strong></div>
+
+        <div class="scenario-layout">
+          <div class="scenario-copy">
+            <article class="story-step is-active" data-scene="inbox">
+              <span>Step 1</span>
+              <h3>문의 메일이 들어오면 자동으로 업무 상태가 붙습니다.</h3>
+              <p>신규 문의, 답장 필요, 일정 감지 같은 상태가 수신함에서 바로 보입니다.</p>
+            </article>
+            <article class="story-step" data-scene="draft">
+              <span>Step 2</span>
+              <h3>AI가 답장 초안을 만들고 사용자는 마지막 문장만 다듬습니다.</h3>
+              <p>회사 프로필, FAQ, 템플릿 기준으로 초안을 만들되 발송 판단은 사용자가 유지합니다.</p>
+            </article>
+            <article class="story-step" data-scene="calendar">
+              <span>Step 3</span>
+              <h3>메일 안의 약속은 캘린더 후보로 자연스럽게 이어집니다.</h3>
+              <p>날짜와 시간을 감지해 일정 카드로 보여주고, 클릭 한 번으로 등록 흐름을 이어갑니다.</p>
+            </article>
+            <article class="story-step" data-scene="automation">
+              <span>Step 4</span>
+              <h3>반복되는 응대는 템플릿과 자동화 규칙으로 축적됩니다.</h3>
+              <p>카테고리별 템플릿과 자동 발송 설정을 통해 팀의 응대 품질을 일정하게 유지합니다.</p>
+            </article>
+          </div>
+
+          <figure class="scenario-stage" data-scene="inbox" aria-label="EmailAssist 사용 흐름 애니메이션">
+            <div class="stage-window">
+              <div class="stage-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+                <strong>demo@emailassist.app</strong>
+              </div>
+              <div class="stage-canvas">
+                <div class="scene scene-inbox">
+                  <div class="screen-title">Inbox</div>
+                  <div class="animated-list">
+                    <article>
+                      <b>도입 비용 문의</b>
+                      <small>신규 문의</small>
+                    </article>
+                    <article>
+                      <b>계약 일정 변경 요청</b>
+                      <small>일정 감지</small>
+                    </article>
+                    <article>
+                      <b>기능 비교 자료 요청</b>
+                      <small>답장 필요</small>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="scene scene-draft">
+                  <div class="screen-title">AI Draft</div>
+                  <div class="typing-card">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p>요청하신 기능 비교 자료와 도입 일정을 함께 안내드립니다.</p>
+                  </div>
+                  <div class="confidence-row">
+                    <span>톤 일치</span>
+                    <span>템플릿 반영</span>
+                    <span>검토 대기</span>
+                  </div>
+                </div>
+
+                <div class="scene scene-calendar">
+                  <div class="screen-title">Calendar candidate</div>
+                  <div class="calendar-card">
+                    <strong>금요일 14:00</strong>
+                    <span>제품 데모 미팅</span>
+                    <button type="button">캘린더에 추가</button>
+                  </div>
+                  <div class="calendar-grid">
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span class="selected"></span><span></span><span></span>
+                  </div>
+                </div>
+
+                <div class="scene scene-automation">
+                  <div class="screen-title">Automation</div>
+                  <div class="rule-card active-rule">
+                    <b>가격 문의</b>
+                    <small>견적 안내 템플릿 연결</small>
+                  </div>
+                  <div class="rule-card">
+                    <b>데모 요청</b>
+                    <small>일정 후보 감지 + 초안 생성</small>
+                  </div>
+                  <div class="rule-switch">
+                    <span></span>
+                    <strong>자동화 활성</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <figcaption>스크롤 위치에 맞춰 실제 사용자 흐름을 단계별로 보여줍니다.</figcaption>
+          </figure>
         </div>
       </section>
 
-      <section id="download" class="slide slide-download">
-        <div class="section-title">
+      <section id="download" class="download-section">
+        <div class="section-heading">
           <span class="eyebrow">Desktop app</span>
-          <h2>Web_Front를 데스크톱 응용프로그램으로 내려받습니다.</h2>
+          <h2>App_Front 최신 데스크톱 앱을 내려받습니다.</h2>
           <p>
-            GitHub Release에 새 버전이 올라오면 이 페이지가 최신 설치 파일을
-            자동으로 표시합니다.
+            GitHub Release에 새 버전이 올라오면 이 페이지가 Windows, macOS,
+            Linux 설치 파일을 자동으로 표시합니다.
           </p>
         </div>
 
-        <div class="release-panel">
-          <div>
-            <span class="label">최신 버전</span>
-            <strong id="release-version">확인 중</strong>
-            <time id="release-date"></time>
+        <div class="download-layout">
+          <div class="release-panel">
+            <div>
+              <span class="label">최신 버전</span>
+              <strong id="release-version">확인 중</strong>
+              <time id="release-date"></time>
+            </div>
+            <a id="release-link" class="button button-primary" href="#" target="_blank" rel="noreferrer">
+              릴리스 노트
+            </a>
           </div>
-          <a id="release-link" class="button button-primary" href="#" target="_blank" rel="noreferrer">
-            릴리스 노트
-          </a>
-        </div>
 
-        <div id="download-assets" class="asset-list" aria-live="polite">
-          <div class="empty-state">
-            <strong>설치 파일을 불러오는 중입니다.</strong>
-            <span>잠시 후 Windows, macOS, Linux 빌드가 표시됩니다.</span>
+          <div id="download-assets" class="asset-list" aria-live="polite">
+            <div class="empty-state">
+              <strong>설치 파일을 불러오는 중입니다.</strong>
+              <span>잠시 후 Windows, macOS, Linux 빌드가 표시됩니다.</span>
+            </div>
           </div>
         </div>
       </section>
