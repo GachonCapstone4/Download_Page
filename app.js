@@ -10,7 +10,7 @@ const assetsNode = document.querySelector("#download-assets");
 const scenarioStageNode = document.querySelector(".scenario-stage");
 const storyStepNodes = Array.from(document.querySelectorAll(".story-step"));
 
-const installerExtensions = [".dmg", ".exe", ".msi", ".appimage", ".deb"];
+const installerExtensions = [".dmg", ".exe", ".msi"];
 
 function formatSize(bytes) {
   if (!bytes) {
@@ -55,10 +55,6 @@ function getPlatformLabel(assetName) {
     return "Windows";
   }
 
-  if (name.endsWith(".appimage") || name.endsWith(".deb")) {
-    return "Linux";
-  }
-
   return "설치 파일";
 }
 
@@ -78,11 +74,7 @@ function pickPrimaryAsset(assets) {
     return assets.find((asset) => asset.name.toLowerCase().endsWith(".dmg"));
   }
 
-  if (platform.includes("linux")) {
-    return assets.find((asset) => asset.name.toLowerCase().endsWith(".appimage"));
-  }
-
-  return assets[0];
+  return undefined;
 }
 
 function renderEmptyState(message, detail) {
@@ -118,7 +110,7 @@ function renderRelease(release) {
   if (assets.length === 0) {
     renderEmptyState(
       "아직 내려받을 수 있는 설치 파일이 없습니다.",
-      "릴리스에 dmg, exe, msi, AppImage, deb 파일이 업로드되면 자동으로 표시됩니다.",
+      "릴리스에 dmg, exe, msi 파일이 업로드되면 자동으로 표시됩니다.",
     );
     return;
   }
