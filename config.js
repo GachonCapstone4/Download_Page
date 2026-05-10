@@ -1,3 +1,3 @@
-window.EMAILASSIST_DOWNLOAD_CONFIG = {
+window.MAILY_DOWNLOAD_CONFIG = {
   releaseRepository: "GachonCapstone4/App_Front",
 };

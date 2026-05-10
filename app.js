@@ -1,4 +1,4 @@
-const config = window.EMAILASSIST_DOWNLOAD_CONFIG ?? {};
+const config = window.MAILY_DOWNLOAD_CONFIG ?? {};
 const releaseRepository = config.releaseRepository ?? "GachonCapstone4/App_Front";
 const releaseEndpoint = `https://api.github.com/repos/${releaseRepository}/releases/latest`;
 

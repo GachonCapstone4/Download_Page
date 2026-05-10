@@ -1,6 +1,6 @@
-# EmailAssist Download Page
+# Maily Download Page
 
-EmailAssist 서비스 소개와 데스크톱 응용프로그램 다운로드를 위한 별도 정적 페이지입니다.
+Maily 서비스 소개와 데스크톱 응용프로그램 다운로드를 위한 별도 정적 페이지입니다.
 
 ## Vercel 배포 설정
 
