@@ -56,7 +56,16 @@ a {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 600;
+}
+
+.brand img {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
 }
 
 .nav-links {
@@ -202,10 +211,19 @@ p {
 
 .device-toolbar strong,
 .stage-topbar strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-left: 8px;
   color: var(--muted);
   font-size: 12px;
   font-weight: 400;
+}
+
+.device-toolbar strong img {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
 }
 
 .app-shell-mock {
@@ -706,13 +724,26 @@ figcaption {
 
 .release-panel {
   display: grid;
-  gap: 24px;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: start;
   padding: 24px;
 }
 
 .release-panel > div {
   display: grid;
   gap: 8px;
+}
+
+.release-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 15px;
+  box-shadow: 0 18px 40px rgba(45, 212, 191, 0.22);
+}
+
+.release-panel .button {
+  grid-column: 1 / -1;
 }
 
 .label,
