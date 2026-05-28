@@ -455,7 +455,13 @@ figcaption {
   border-left: 3px solid var(--hairline);
   padding: 4px 0 26px 22px;
   opacity: 0.46;
+  cursor: pointer;
   transition: opacity 220ms ease, border-color 220ms ease, transform 220ms ease;
+}
+
+.story-step:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 6px;
 }
 
 .story-step.is-active {
@@ -746,6 +752,10 @@ figcaption {
   grid-column: 1 / -1;
 }
 
+.release-panel .button + .button {
+  margin-top: -12px;
+}
+
 .label,
 time,
 .asset-card small,
@@ -783,6 +793,27 @@ time,
   display: block;
   margin-top: 4px;
   overflow-wrap: anywhere;
+}
+
+.checksum,
+.checksum-note {
+  display: block;
+  margin-top: 9px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.48);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.download-note {
+  max-width: 760px;
+  margin-top: 18px;
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .download-mark {
